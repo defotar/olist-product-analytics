@@ -10,6 +10,8 @@
 
 **[Интерактивный дашборд в DataLens →](https://datalens.yandex/isqsplrx839e1?_share_link=public)**
 
+[![Дашборд в DataLens](reports/figures/00_dashboard.png)](https://datalens.yandex/isqsplrx839e1?_share_link=public)
+
 ## Главное
 
 | Вывод | Цифры |
