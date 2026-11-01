@@ -1,11 +1,10 @@
-origin,mql,closed_active,conversion_pct,median_days_to_close
-direct_traffic,499,31,6.21,8
-display,118,2,1.69,3.5
-email,493,6,1.22,18.5
-organic_search,2296,113,4.92,9
-other,150,2,1.33,23.5
-other_publicities,65,0,0.00,
+Канал,Лиды,Стали продавцами,"Конверсия, %",Дней до сделки (медиана)
+unknown,1159,85,7.33,9
 paid_search,1586,101,6.37,10
+direct_traffic,499,31,6.21,8
+organic_search,2296,113,4.92,9
 referral,284,9,3.17,7
 social,1350,31,2.30,21
-unknown,1159,85,7.33,9
+display,118,2,1.69,3.5
+other,150,2,1.33,23.5
+email,493,6,1.22,18.5
