@@ -8,6 +8,8 @@
 
 Стек: PostgreSQL (витрины на SQL, оконные функции), Python (pandas, SciPy, statsmodels), Yandex DataLens.
 
+**[Интерактивный дашборд в DataLens →](https://datalens.yandex/isqsplrx839e1?_share_link=public)**
+
 ## Главное
 
 | Вывод | Цифры |
@@ -38,7 +40,7 @@
 
 ![Заказы и опоздания по месяцам](reports/figures/05_monthly_orders_and_late.png)
 
-Дашборд в DataLens строится по выгрузкам из [`marts/`](marts), инструкция — [docs/datalens.md](docs/datalens.md).
+[Дашборд в DataLens](https://datalens.yandex/isqsplrx839e1?_share_link=public) построен по выгрузкам из [`marts/`](marts), инструкция — [docs/datalens.md](docs/datalens.md).
 
 ## Как устроен проект
 
