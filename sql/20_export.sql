@@ -8,7 +8,7 @@
 -- Месяцы без неполных краёв: 2017-01 … 2018-08
 \copy (SELECT purchase_month AS "Месяц", orders AS "Заказы", customers AS "Покупатели", first_orders AS "Новые покупатели", gmv AS "Выручка, BRL", aov AS "Средний чек, BRL", late_pct AS "Опоздания, %", avg_review AS "Средняя оценка", negative_review_pct AS "Плохие отзывы, %" FROM mart.monthly_kpi WHERE purchase_month BETWEEN '2017-01-01' AND '2018-08-01' ORDER BY 1) TO 'marts/monthly_kpi.csv' WITH (FORMAT csv, HEADER)
 
-\copy (SELECT left(delay_bucket, 2)::int AS "Порядок", split_part(delay_bucket, ': ', 2) AS "Срок доставки", CASE WHEN delay_bucket LIKE '%опоздание%' THEN 'Опоздание' ELSE 'В срок' END AS "Опоздание", orders AS "Заказы", avg_review AS "Средняя оценка", negative_review_pct AS "Плохие отзывы, %" FROM mart.delay_vs_review ORDER BY 1) TO 'marts/delay_vs_review.csv' WITH (FORMAT csv, HEADER)
+\copy (SELECT left(delay_bucket, 2)::int || '. ' || split_part(delay_bucket, ': ', 2) AS "Срок доставки", CASE WHEN delay_bucket LIKE '%опоздание%' THEN 'Опоздание' ELSE 'В срок' END AS "Опоздание", orders AS "Заказы", avg_review AS "Средняя оценка", negative_review_pct AS "Плохие отзывы, %" FROM mart.delay_vs_review ORDER BY 1) TO 'marts/delay_vs_review.csv' WITH (FORMAT csv, HEADER)
 
 -- Когорты 2017-01 … 2018-03, месяцы 1–12
 \copy (SELECT to_char(cohort_month, 'YYYY-MM') AS "Когорта", month_offset AS "Номер месяца", 'M' || lpad(month_offset::text, 2, '0') AS "Месяц после покупки", cohort_size AS "Размер когорты", customers AS "Вернулись", retention_pct AS "Вернулись, %" FROM mart.cohort_retention WHERE cohort_month BETWEEN '2017-01-01' AND '2018-03-01' AND month_offset BETWEEN 1 AND 12 ORDER BY 1, 2) TO 'marts/cohort_retention.csv' WITH (FORMAT csv, HEADER)
