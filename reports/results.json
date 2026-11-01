@@ -1,0 +1,196 @@
+{
+  "late_vs_negative_review": {
+    "late_orders": 6213,
+    "ontime_orders": 87231,
+    "negative_pct_late": 62.27,
+    "negative_pct_ontime": 9.12,
+    "diff_pp_ci95": [
+      51.93,
+      54.37
+    ],
+    "z": 121.8,
+    "p_value": 0.0,
+    "avg_score_late": 2.27,
+    "avg_score_ontime": 4.3,
+    "mannwhitney_p": 0.0
+  },
+  "first_order_and_repeat": {
+    "follow_up_days": 180,
+    "customers": 54813,
+    "overall_repeat_pct": 1.95,
+    "groups": {
+      "Первый заказ вовремя": {
+        "customers": 50949,
+        "repeat": 1010,
+        "repeat_pct": 1.98,
+        "ci95": [
+          1.86,
+          2.11
+        ]
+      },
+      "Первый заказ с опозданием": {
+        "customers": 3864,
+        "repeat": 59,
+        "repeat_pct": 1.53,
+        "ci95": [
+          1.19,
+          1.96
+        ]
+      },
+      "Отзыв 4–5": {
+        "customers": 42673,
+        "repeat": 867,
+        "repeat_pct": 2.03,
+        "ci95": [
+          1.9,
+          2.17
+        ]
+      },
+      "Отзыв 1–2": {
+        "customers": 7325,
+        "repeat": 114,
+        "repeat_pct": 1.56,
+        "ci95": [
+          1.3,
+          1.87
+        ]
+      }
+    },
+    "late_vs_ontime_z": -1.97,
+    "late_vs_ontime_p": 0.04839369852465429,
+    "late_vs_ontime_mde_pp": 0.6,
+    "logit_controls": "штат (8 крупнейших + прочие), категория (15 + прочие), log(чек), доля доставки в чеке, квартал покупки",
+    "logit_is_late": {
+      "odds_ratio": 0.911,
+      "ci95": [
+        0.681,
+        1.218
+      ],
+      "p_value": 0.5283422776815958
+    },
+    "logit_negative_review": {
+      "odds_ratio": 0.797,
+      "ci95": [
+        0.643,
+        0.987
+      ],
+      "p_value": 0.03716484832887906
+    },
+    "logit_n": 54813,
+    "logit_converged": true,
+    "logit_pseudo_r2": 0.0092
+  },
+  "retention": {
+    "cohorts": "2017-01 … 2018-03",
+    "customers_in_cohorts": 62136,
+    "weighted_retention_pct_by_month": {
+      "1": 0.47,
+      "2": 0.352,
+      "3": 0.262,
+      "4": 0.275,
+      "5": 0.224,
+      "6": 0.2,
+      "7": 0.163,
+      "8": 0.14,
+      "9": 0.095,
+      "10": 0.124,
+      "11": 0.084,
+      "12": 0.06
+    },
+    "one_time_buyers_pct": 96.98
+  },
+  "seller_funnel": {
+    "mql": 8000,
+    "closed_active": 380,
+    "conversion_pct": 4.75,
+    "by_channel": {
+      "other (мелкие каналы)": {
+        "mql": 333,
+        "closed_active": 4,
+        "pct": 1.2,
+        "ci95": [
+          0.47,
+          3.05
+        ]
+      },
+      "email": {
+        "mql": 493,
+        "closed_active": 6,
+        "pct": 1.22,
+        "ci95": [
+          0.56,
+          2.63
+        ]
+      },
+      "social": {
+        "mql": 1350,
+        "closed_active": 31,
+        "pct": 2.3,
+        "ci95": [
+          1.62,
+          3.24
+        ]
+      },
+      "referral": {
+        "mql": 284,
+        "closed_active": 9,
+        "pct": 3.17,
+        "ci95": [
+          1.68,
+          5.91
+        ]
+      },
+      "organic_search": {
+        "mql": 2296,
+        "closed_active": 113,
+        "pct": 4.92,
+        "ci95": [
+          4.11,
+          5.88
+        ]
+      },
+      "direct_traffic": {
+        "mql": 499,
+        "closed_active": 31,
+        "pct": 6.21,
+        "ci95": [
+          4.41,
+          8.68
+        ]
+      },
+      "paid_search": {
+        "mql": 1586,
+        "closed_active": 101,
+        "pct": 6.37,
+        "ci95": [
+          5.27,
+          7.68
+        ]
+      },
+      "unknown": {
+        "mql": 1159,
+        "closed_active": 85,
+        "pct": 7.33,
+        "ci95": [
+          5.97,
+          8.98
+        ]
+      }
+    },
+    "chi2": 71.2,
+    "dof": 7,
+    "p_value": 8.470215567297964e-13
+  },
+  "monthly": {
+    "orders_2017": 43594,
+    "late_pct_peak_month": "2018-03",
+    "late_pct_peak": 18.99,
+    "late_pct_median_month": 4.4350000000000005
+  },
+  "delivery": {
+    "delivered_orders": 95119,
+    "avg_days_before_estimate": 11.9,
+    "avg_delivery_days": 12.6,
+    "late_pct": 6.65
+  }
+}
